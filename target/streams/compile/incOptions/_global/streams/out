@@ -1,0 +1,56 @@
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/patmos/chisel-examples/target/scala-2.12/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartMain$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartMain$$anon$7.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartMain.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartIO.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Buffer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartMain$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Tx.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BufferedTx.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Tx$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Rx.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sender.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Echo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sender$$anon$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Echo$$anon$6.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Rx$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Buffer$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BufferedTx$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartMain$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartMain$$anon$7.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartMain.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartIO.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Buffer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartMain$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Tx.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BufferedTx.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Tx$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Rx.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sender.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Echo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sender$$anon$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Echo$$anon$6.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Rx$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Buffer$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BufferedTx$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartMain$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartMain$$anon$7.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartMain.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartIO.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Buffer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UartMain$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Tx.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BufferedTx.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Tx$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Rx.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sender.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Echo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Sender$$anon$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Echo$$anon$6.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Rx$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Buffer$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BufferedTx$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/patmos/chisel-examples/target/scala-2.12/classes.bak[0m

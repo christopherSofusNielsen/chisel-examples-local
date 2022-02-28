@@ -1,0 +1,186 @@
+|uart_top
+clock => UartMain:u.clock
+clock => int_res.CLK
+clock => res_reg2.CLK
+clock => res_reg1.CLK
+clock => res_cnt[0].CLK
+clock => res_cnt[1].CLK
+clock => res_cnt[2].CLK
+rxd => UartMain:u.io_rxd
+txd << UartMain:u.io_txd
+
+
+|uart_top|UartMain:u
+clock => Sender_clock.IN1
+reset => Sender_reset.IN1
+io_rxd => ~NO_FANOUT~
+io_txd <= Sender:Sender.io_txd
+
+
+|uart_top|UartMain:u|Sender:Sender
+clock => tx_clock.IN1
+reset => tx_reset.IN1
+io_txd <= BufferedTx:tx.io_txd
+
+
+|uart_top|UartMain:u|Sender:Sender|BufferedTx:tx
+clock => buf__clock.IN2
+reset => buf__reset.IN2
+io_txd <= Tx:tx.io_txd
+io_channel_ready <= Buffer:buf_.io_in_ready
+io_channel_valid => buf__io_in_valid.IN1
+io_channel_bits[0] => buf__io_in_bits[0].IN1
+io_channel_bits[1] => buf__io_in_bits[1].IN1
+io_channel_bits[2] => buf__io_in_bits[2].IN1
+io_channel_bits[3] => buf__io_in_bits[3].IN1
+io_channel_bits[4] => buf__io_in_bits[4].IN1
+io_channel_bits[5] => buf__io_in_bits[5].IN1
+io_channel_bits[6] => buf__io_in_bits[6].IN1
+io_channel_bits[7] => buf__io_in_bits[7].IN1
+
+
+|uart_top|UartMain:u|Sender:Sender|BufferedTx:tx|Tx:tx
+clock => bitsReg[0].CLK
+clock => bitsReg[1].CLK
+clock => bitsReg[2].CLK
+clock => bitsReg[3].CLK
+clock => cntReg[0].CLK
+clock => cntReg[1].CLK
+clock => cntReg[2].CLK
+clock => cntReg[3].CLK
+clock => cntReg[4].CLK
+clock => cntReg[5].CLK
+clock => cntReg[6].CLK
+clock => cntReg[7].CLK
+clock => cntReg[8].CLK
+clock => cntReg[9].CLK
+clock => cntReg[10].CLK
+clock => cntReg[11].CLK
+clock => cntReg[12].CLK
+clock => cntReg[13].CLK
+clock => cntReg[14].CLK
+clock => cntReg[15].CLK
+clock => cntReg[16].CLK
+clock => cntReg[17].CLK
+clock => cntReg[18].CLK
+clock => cntReg[19].CLK
+clock => shiftReg[0].CLK
+clock => shiftReg[1].CLK
+clock => shiftReg[2].CLK
+clock => shiftReg[3].CLK
+clock => shiftReg[4].CLK
+clock => shiftReg[5].CLK
+clock => shiftReg[6].CLK
+clock => shiftReg[7].CLK
+clock => shiftReg[8].CLK
+clock => shiftReg[9].CLK
+clock => shiftReg[10].CLK
+reset => shiftReg.OUTPUTSELECT
+reset => shiftReg.OUTPUTSELECT
+reset => shiftReg.OUTPUTSELECT
+reset => shiftReg.OUTPUTSELECT
+reset => shiftReg.OUTPUTSELECT
+reset => shiftReg.OUTPUTSELECT
+reset => shiftReg.OUTPUTSELECT
+reset => shiftReg.OUTPUTSELECT
+reset => shiftReg.OUTPUTSELECT
+reset => shiftReg.OUTPUTSELECT
+reset => shiftReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => cntReg.OUTPUTSELECT
+reset => bitsReg.OUTPUTSELECT
+reset => bitsReg.OUTPUTSELECT
+reset => bitsReg.OUTPUTSELECT
+reset => bitsReg.OUTPUTSELECT
+io_txd <= shiftReg[0].DB_MAX_OUTPUT_PORT_TYPE
+io_channel_ready <= io_channel_ready.DB_MAX_OUTPUT_PORT_TYPE
+io_channel_valid => shiftReg.OUTPUTSELECT
+io_channel_valid => shiftReg.OUTPUTSELECT
+io_channel_valid => shiftReg.OUTPUTSELECT
+io_channel_valid => shiftReg.OUTPUTSELECT
+io_channel_valid => shiftReg.OUTPUTSELECT
+io_channel_valid => shiftReg.OUTPUTSELECT
+io_channel_valid => shiftReg.OUTPUTSELECT
+io_channel_valid => shiftReg.OUTPUTSELECT
+io_channel_valid => bitsReg.OUTPUTSELECT
+io_channel_valid => bitsReg.OUTPUTSELECT
+io_channel_valid => bitsReg.OUTPUTSELECT
+io_channel_valid => bitsReg.OUTPUTSELECT
+io_channel_valid => shiftReg.DATAA
+io_channel_bits[0] => shiftReg.DATAB
+io_channel_bits[1] => shiftReg.DATAB
+io_channel_bits[2] => shiftReg.DATAB
+io_channel_bits[3] => shiftReg.DATAB
+io_channel_bits[4] => shiftReg.DATAB
+io_channel_bits[5] => shiftReg.DATAB
+io_channel_bits[6] => shiftReg.DATAB
+io_channel_bits[7] => shiftReg.DATAB
+
+
+|uart_top|UartMain:u|Sender:Sender|BufferedTx:tx|Buffer:buf_
+clock => dataReg[0].CLK
+clock => dataReg[1].CLK
+clock => dataReg[2].CLK
+clock => dataReg[3].CLK
+clock => dataReg[4].CLK
+clock => dataReg[5].CLK
+clock => dataReg[6].CLK
+clock => dataReg[7].CLK
+clock => stateReg.CLK
+reset => stateReg.OUTPUTSELECT
+reset => dataReg.OUTPUTSELECT
+reset => dataReg.OUTPUTSELECT
+reset => dataReg.OUTPUTSELECT
+reset => dataReg.OUTPUTSELECT
+reset => dataReg.OUTPUTSELECT
+reset => dataReg.OUTPUTSELECT
+reset => dataReg.OUTPUTSELECT
+reset => dataReg.OUTPUTSELECT
+io_in_ready <= stateReg.DB_MAX_OUTPUT_PORT_TYPE
+io_in_valid => _GEN_1.IN1
+io_in_valid => dataReg.OUTPUTSELECT
+io_in_valid => dataReg.OUTPUTSELECT
+io_in_valid => dataReg.OUTPUTSELECT
+io_in_valid => dataReg.OUTPUTSELECT
+io_in_valid => dataReg.OUTPUTSELECT
+io_in_valid => dataReg.OUTPUTSELECT
+io_in_valid => dataReg.OUTPUTSELECT
+io_in_valid => dataReg.OUTPUTSELECT
+io_in_bits[0] => dataReg.DATAB
+io_in_bits[1] => dataReg.DATAB
+io_in_bits[2] => dataReg.DATAB
+io_in_bits[3] => dataReg.DATAB
+io_in_bits[4] => dataReg.DATAB
+io_in_bits[5] => dataReg.DATAB
+io_in_bits[6] => dataReg.DATAB
+io_in_bits[7] => dataReg.DATAB
+io_out_ready => stateReg.OUTPUTSELECT
+io_out_valid <= stateReg.DB_MAX_OUTPUT_PORT_TYPE
+io_out_bits[0] <= dataReg[0].DB_MAX_OUTPUT_PORT_TYPE
+io_out_bits[1] <= dataReg[1].DB_MAX_OUTPUT_PORT_TYPE
+io_out_bits[2] <= dataReg[2].DB_MAX_OUTPUT_PORT_TYPE
+io_out_bits[3] <= dataReg[3].DB_MAX_OUTPUT_PORT_TYPE
+io_out_bits[4] <= dataReg[4].DB_MAX_OUTPUT_PORT_TYPE
+io_out_bits[5] <= dataReg[5].DB_MAX_OUTPUT_PORT_TYPE
+io_out_bits[6] <= dataReg[6].DB_MAX_OUTPUT_PORT_TYPE
+io_out_bits[7] <= dataReg[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
