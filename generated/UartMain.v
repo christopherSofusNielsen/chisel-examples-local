@@ -284,8 +284,6 @@ module Sender(
       cntReg <= 8'h0; // @[Uart.scala 167:23]
     end else if (tx_io_channel_ready & _T_1) begin // @[Uart.scala 172:47]
       cntReg <= _T_5; // @[Uart.scala 173:12]
-    end else if (cntReg == 8'hc) begin // @[Uart.scala 174:29]
-      cntReg <= 8'h0; // @[Uart.scala 175:12]
     end
   end
 // Register and memory initialization
@@ -340,15 +338,15 @@ module UartMain(
   input   io_rxd,
   output  io_txd
 );
-  wire  Sender_clock; // @[Uart.scala 201:19]
-  wire  Sender_reset; // @[Uart.scala 201:19]
-  wire  Sender_io_txd; // @[Uart.scala 201:19]
-  Sender Sender ( // @[Uart.scala 201:19]
+  wire  Sender_clock; // @[Uart.scala 203:19]
+  wire  Sender_reset; // @[Uart.scala 203:19]
+  wire  Sender_io_txd; // @[Uart.scala 203:19]
+  Sender Sender ( // @[Uart.scala 203:19]
     .clock(Sender_clock),
     .reset(Sender_reset),
     .io_txd(Sender_io_txd)
   );
-  assign io_txd = Sender_io_txd; // @[Uart.scala 202:12]
+  assign io_txd = Sender_io_txd; // @[Uart.scala 204:12]
   assign Sender_clock = clock;
   assign Sender_reset = reset;
 endmodule

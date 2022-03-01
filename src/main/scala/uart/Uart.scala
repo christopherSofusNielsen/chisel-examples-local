@@ -171,9 +171,11 @@ class Sender(frequency: Int, baudRate: Int) extends Module {
 
   when(tx.io.channel.ready && cntReg =/= len) {
     cntReg := cntReg + 1.U
-  }.elsewhen(cntReg === len){
-    cntReg := 0.U
   }
+
+/*    .elsewhen(cntReg === len){
+    cntReg := 0.U
+  }*/
 }
 
 class Echo(frequency: Int, baudRate: Int) extends Module {

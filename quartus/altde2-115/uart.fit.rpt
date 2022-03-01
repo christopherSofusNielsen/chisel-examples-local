@@ -1,5 +1,5 @@
 Fitter report for uart
-Mon Feb 28 21:34:47 2022
+Tue Mar  1 16:11:17 2022
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -67,15 +67,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Feb 28 21:34:47 2022       ;
+; Fitter Status                      ; Successful - Tue Mar  1 16:11:17 2022       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; uart                                        ;
 ; Top-level Entity Name              ; uart_top                                    ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 81 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 72 / 114,480 ( < 1 % )                      ;
+; Total logic elements               ; 80 / 114,480 ( < 1 % )                      ;
+;     Total combinational functions  ; 71 / 114,480 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 55 / 114,480 ( < 1 % )                      ;
 ; Total registers                    ; 55                                          ;
 ; Total pins                         ; 3 / 529 ( < 1 % )                           ;
@@ -159,8 +159,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processors 3-4         ;   0.2%      ;
+;     Processors 2-4         ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -226,8 +225,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 144 ) ; 0.00 % ( 0 / 144 )         ; 0.00 % ( 0 / 144 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 144 ) ; 0.00 % ( 0 / 144 )         ; 0.00 % ( 0 / 144 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 143 ) ; 0.00 % ( 0 / 143 )         ; 0.00 % ( 0 / 143 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 143 ) ; 0.00 % ( 0 / 143 )         ; 0.00 % ( 0 / 143 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -250,7 +249,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 134 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 133 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -258,7 +257,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/patmos/chisel-examples/quartus/altde2-115/uart.pin.
+The pin-out file can be found in /home/patmos/aca/chisel-examples-local/quartus/altde2-115/uart.pin.
 
 
 +----------------------------------------------------------------------+
@@ -266,26 +265,26 @@ The pin-out file can be found in /home/patmos/chisel-examples/quartus/altde2-115
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 81 / 114,480 ( < 1 % ) ;
-;     -- Combinational with no register       ; 26                     ;
+; Total logic elements                        ; 80 / 114,480 ( < 1 % ) ;
+;     -- Combinational with no register       ; 25                     ;
 ;     -- Register only                        ; 9                      ;
 ;     -- Combinational with a register        ; 46                     ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 32                     ;
-;     -- 3 input functions                    ; 8                      ;
-;     -- <=2 input functions                  ; 32                     ;
+;     -- 4 input functions                    ; 33                     ;
+;     -- 3 input functions                    ; 7                      ;
+;     -- <=2 input functions                  ; 31                     ;
 ;     -- Register only                        ; 9                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 46                     ;
+;     -- normal mode                          ; 45                     ;
 ;     -- arithmetic mode                      ; 26                     ;
 ;                                             ;                        ;
 ; Total registers*                            ; 55 / 117,053 ( < 1 % ) ;
 ;     -- Dedicated logic registers            ; 55 / 114,480 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 7 / 7,155 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 6 / 7,155 ( < 1 % )    ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 3 / 529 ( < 1 % )      ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )         ;
@@ -304,11 +303,11 @@ The pin-out file can be found in /home/patmos/chisel-examples/quartus/altde2-115
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%     ;
-; Peak interconnect usage (total/H/V)         ; 0.4% / 0.3% / 0.4%     ;
+; Peak interconnect usage (total/H/V)         ; 0.2% / 0.1% / 0.4%     ;
 ; Maximum fan-out                             ; 55                     ;
 ; Highest non-global fan-out                  ; 32                     ;
-; Total fan-out                               ; 437                    ;
-; Average fan-out                             ; 2.86                   ;
+; Total fan-out                               ; 428                    ;
+; Average fan-out                             ; 2.82                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -321,26 +320,26 @@ The pin-out file can be found in /home/patmos/chisel-examples/quartus/altde2-115
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 81 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 26                    ; 0                              ;
+; Total logic elements                        ; 80 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 25                    ; 0                              ;
 ;     -- Register only                        ; 9                     ; 0                              ;
 ;     -- Combinational with a register        ; 46                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 32                    ; 0                              ;
-;     -- 3 input functions                    ; 8                     ; 0                              ;
-;     -- <=2 input functions                  ; 32                    ; 0                              ;
+;     -- 4 input functions                    ; 33                    ; 0                              ;
+;     -- 3 input functions                    ; 7                     ; 0                              ;
+;     -- <=2 input functions                  ; 31                    ; 0                              ;
 ;     -- Register only                        ; 9                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 46                    ; 0                              ;
+;     -- normal mode                          ; 45                    ; 0                              ;
 ;     -- arithmetic mode                      ; 26                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 55                    ; 0                              ;
 ;     -- Dedicated logic registers            ; 55 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 7 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 6 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 3                     ; 0                              ;
@@ -356,7 +355,7 @@ The pin-out file can be found in /home/patmos/chisel-examples/quartus/altde2-115
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 432                   ; 5                              ;
+;     -- Total Connections                    ; 423                   ; 5                              ;
 ;     -- Registered Connections               ; 176                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
@@ -1243,12 +1242,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                          ; Entity Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------+-------------+--------------+
-; |uart_top                  ; 81 (8)      ; 55 (6)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 3    ; 0            ; 26 (2)       ; 9 (2)             ; 46 (4)           ; |uart_top                                                    ; uart_top    ; work         ;
-;    |UartMain:u|            ; 73 (0)      ; 49 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (0)       ; 7 (0)             ; 42 (0)           ; |uart_top|UartMain:u                                         ; UartMain    ; work         ;
-;       |Sender:Sender|      ; 73 (11)     ; 49 (8)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (3)       ; 7 (0)             ; 42 (8)           ; |uart_top|UartMain:u|Sender:Sender                           ; Sender      ; work         ;
-;          |BufferedTx:tx|   ; 62 (0)      ; 41 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (0)       ; 7 (0)             ; 34 (0)           ; |uart_top|UartMain:u|Sender:Sender|BufferedTx:tx             ; BufferedTx  ; work         ;
+; |uart_top                  ; 80 (8)      ; 55 (6)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 3    ; 0            ; 25 (2)       ; 9 (2)             ; 46 (4)           ; |uart_top                                                    ; uart_top    ; work         ;
+;    |UartMain:u|            ; 72 (0)      ; 49 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (0)       ; 7 (0)             ; 42 (0)           ; |uart_top|UartMain:u                                         ; UartMain    ; work         ;
+;       |Sender:Sender|      ; 72 (11)     ; 49 (8)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (3)       ; 7 (0)             ; 42 (8)           ; |uart_top|UartMain:u|Sender:Sender                           ; Sender      ; work         ;
+;          |BufferedTx:tx|   ; 61 (0)      ; 41 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (0)       ; 7 (0)             ; 34 (0)           ; |uart_top|UartMain:u|Sender:Sender|BufferedTx:tx             ; BufferedTx  ; work         ;
 ;             |Buffer:buf_|  ; 9 (9)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 8 (8)            ; |uart_top|UartMain:u|Sender:Sender|BufferedTx:tx|Buffer:buf_ ; Buffer      ; work         ;
-;             |Tx:tx|        ; 53 (53)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 7 (7)             ; 26 (26)          ; |uart_top|UartMain:u|Sender:Sender|BufferedTx:tx|Tx:tx       ; Tx          ; work         ;
+;             |Tx:tx|        ; 52 (52)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 7 (7)             ; 26 (26)          ; |uart_top|UartMain:u|Sender:Sender|BufferedTx:tx|Tx:tx       ; Tx          ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1274,17 +1273,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                      ;
-+--------------------------------------------------------------+-------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                                         ; Location          ; Fan-Out ; Usage                    ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------------------------------------+-------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
-; UartMain:u|Sender:Sender|BufferedTx:tx|Buffer:buf_|dataReg~8 ; LCCOMB_X33_Y68_N2 ; 7       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; UartMain:u|Sender:Sender|BufferedTx:tx|Tx:tx|shiftReg[0]~2   ; LCCOMB_X32_Y68_N8 ; 29      ; Clock enable, Sync. load ; no     ; --                   ; --               ; --                        ;
-; UartMain:u|Sender:Sender|Equal11~2                           ; LCCOMB_X33_Y70_N4 ; 9       ; Sync. load               ; no     ; --                   ; --               ; --                        ;
-; clock                                                        ; PIN_Y2            ; 55      ; Clock                    ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; int_res                                                      ; FF_X32_Y70_N1     ; 32      ; Sync. clear, Sync. load  ; no     ; --                   ; --               ; --                        ;
-+--------------------------------------------------------------+-------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                     ;
++------------------------------------------------------------+--------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                       ; Location           ; Fan-Out ; Usage                    ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------------------------------------------+--------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
+; UartMain:u|Sender:Sender|BufferedTx:tx|Tx:tx|shiftReg[0]~2 ; LCCOMB_X17_Y71_N8  ; 29      ; Clock enable, Sync. load ; no     ; --                   ; --               ; --                        ;
+; UartMain:u|Sender:Sender|cntReg[4]~8                       ; LCCOMB_X17_Y72_N26 ; 15      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; clock                                                      ; PIN_Y2             ; 55      ; Clock                    ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; int_res                                                    ; FF_X17_Y72_N29     ; 32      ; Sync. clear, Sync. load  ; no     ; --                   ; --               ; --                        ;
++------------------------------------------------------------+--------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------+
@@ -1292,7 +1290,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clock ; PIN_Y2   ; 55      ; 11                                   ; Global Clock         ; GCLK4            ; --                        ;
+; clock ; PIN_Y2   ; 55      ; 13                                   ; Global Clock         ; GCLK4            ; --                        ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1301,30 +1299,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 53 / 342,891 ( < 1 % ) ;
+; Block interconnects   ; 46 / 342,891 ( < 1 % ) ;
 ; C16 interconnects     ; 0 / 10,120 ( 0 % )     ;
-; C4 interconnects      ; 17 / 209,544 ( < 1 % ) ;
-; Direct links          ; 16 / 342,891 ( < 1 % ) ;
+; C4 interconnects      ; 18 / 209,544 ( < 1 % ) ;
+; Direct links          ; 18 / 342,891 ( < 1 % ) ;
 ; Global clocks         ; 1 / 20 ( 5 % )         ;
-; Local interconnects   ; 61 / 119,088 ( < 1 % ) ;
-; R24 interconnects     ; 1 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 18 / 289,782 ( < 1 % ) ;
+; Local interconnects   ; 66 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 0 / 9,963 ( 0 % )      ;
+; R4 interconnects      ; 8 / 289,782 ( < 1 % )  ;
 +-----------------------+------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 11.57) ; Number of LABs  (Total = 7) ;
+; Number of Logic Elements  (Average = 13.33) ; Number of LABs  (Total = 6) ;
 +---------------------------------------------+-----------------------------+
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
-; 3                                           ; 1                           ;
+; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
-; 6                                           ; 1                           ;
+; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
+; 8                                           ; 1                           ;
 ; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
 ; 11                                          ; 1                           ;
@@ -1339,10 +1337,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.43) ; Number of LABs  (Total = 7) ;
+; LAB-wide Signals  (Average = 1.83) ; Number of LABs  (Total = 6) ;
 +------------------------------------+-----------------------------+
 ; 1 Clock                            ; 6                           ;
-; 1 Clock enable                     ; 1                           ;
+; 1 Clock enable                     ; 2                           ;
 ; 1 Sync. clear                      ; 1                           ;
 ; 1 Sync. load                       ; 2                           ;
 +------------------------------------+-----------------------------+
@@ -1351,12 +1349,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 19.43) ; Number of LABs  (Total = 7) ;
+; Number of Signals Sourced  (Average = 22.50) ; Number of LABs  (Total = 6) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
 ; 2                                            ; 0                           ;
-; 3                                            ; 1                           ;
+; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
 ; 5                                            ; 0                           ;
 ; 6                                            ; 0                           ;
@@ -1365,14 +1363,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
-; 12                                           ; 1                           ;
+; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
-; 14                                           ; 0                           ;
+; 14                                           ; 1                           ;
 ; 15                                           ; 0                           ;
-; 16                                           ; 0                           ;
+; 16                                           ; 1                           ;
 ; 17                                           ; 0                           ;
 ; 18                                           ; 0                           ;
-; 19                                           ; 1                           ;
+; 19                                           ; 0                           ;
 ; 20                                           ; 0                           ;
 ; 21                                           ; 0                           ;
 ; 22                                           ; 0                           ;
@@ -1381,23 +1379,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 25                                           ; 1                           ;
 ; 26                                           ; 1                           ;
 ; 27                                           ; 0                           ;
-; 28                                           ; 1                           ;
+; 28                                           ; 0                           ;
+; 29                                           ; 0                           ;
+; 30                                           ; 0                           ;
+; 31                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 4.71) ; Number of LABs  (Total = 7) ;
+; Number of Signals Sourced Out  (Average = 4.50) ; Number of LABs  (Total = 6) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 2                           ;
-; 2                                               ; 0                           ;
+; 1                                               ; 1                           ;
+; 2                                               ; 1                           ;
 ; 3                                               ; 1                           ;
 ; 4                                               ; 1                           ;
 ; 5                                               ; 1                           ;
 ; 6                                               ; 0                           ;
-; 7                                               ; 1                           ;
+; 7                                               ; 0                           ;
 ; 8                                               ; 0                           ;
 ; 9                                               ; 0                           ;
 ; 10                                              ; 0                           ;
@@ -1409,26 +1410,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 6.86) ; Number of LABs  (Total = 7) ;
+; Number of Distinct Inputs  (Average = 6.83) ; Number of LABs  (Total = 6) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
-; 1                                           ; 1                           ;
+; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
-; 3                                           ; 1                           ;
-; 4                                           ; 2                           ;
+; 3                                           ; 2                           ;
+; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
-; 7                                           ; 1                           ;
+; 7                                           ; 2                           ;
 ; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
+; 9                                           ; 1                           ;
 ; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
 ; 12                                          ; 1                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 0                           ;
-; 17                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1566,7 +1562,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clock~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: /home/patmos/chisel-examples/vhdl/uart_top.vhdl Line: 12
+Info (176353): Automatically promoted node clock~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: /home/patmos/aca/chisel-examples-local/vhdl/uart_top.vhdl Line: 12
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1602,14 +1598,14 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:09
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X23_Y61 to location X33_Y73
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y61 to location X22_Y73
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.12 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.42 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1617,19 +1613,19 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 2 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin rxd uses I/O standard 3.3-V LVTTL at G12 File: /home/patmos/chisel-examples/vhdl/uart_top.vhdl Line: 15
-    Info (169178): Pin clock uses I/O standard 3.3-V LVCMOS at Y2 File: /home/patmos/chisel-examples/vhdl/uart_top.vhdl Line: 12
-Info (144001): Generated suppressed messages file /home/patmos/chisel-examples/quartus/altde2-115/uart.fit.smsg
+    Info (169178): Pin rxd uses I/O standard 3.3-V LVTTL at G12 File: /home/patmos/aca/chisel-examples-local/vhdl/uart_top.vhdl Line: 15
+    Info (169178): Pin clock uses I/O standard 3.3-V LVCMOS at Y2 File: /home/patmos/aca/chisel-examples-local/vhdl/uart_top.vhdl Line: 12
+Info (144001): Generated suppressed messages file /home/patmos/aca/chisel-examples-local/quartus/altde2-115/uart.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 1685 megabytes
-    Info: Processing ended: Mon Feb 28 21:34:47 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 1681 megabytes
+    Info: Processing ended: Tue Mar  1 16:11:17 2022
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/patmos/chisel-examples/quartus/altde2-115/uart.fit.smsg.
+The suppressed messages can be found in /home/patmos/aca/chisel-examples-local/quartus/altde2-115/uart.fit.smsg.
 
 

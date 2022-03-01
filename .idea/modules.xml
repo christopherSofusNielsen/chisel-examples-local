@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chisel-examples.iml" filepath="$PROJECT_DIR$/.idea/modules/chisel-examples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chisel-examples-build.iml" filepath="$PROJECT_DIR$/.idea/modules/chisel-examples-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chisel-examples-local.iml" filepath="$PROJECT_DIR$/.idea/modules/chisel-examples-local.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chisel-examples-local-build.iml" filepath="$PROJECT_DIR$/.idea/modules/chisel-examples-local-build.iml" />
     </modules>
   </component>
 </project>

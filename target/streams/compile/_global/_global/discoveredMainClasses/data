@@ -1,1 +1,1 @@
-["simple.AluMain","simple.KnightMain","uart.UartMain","util.Debounce"]
+["simple.AluMain","simple.KnightMain","uart.UartBlink","uart.UartMain","uart.UartSpeed","util.Debounce"]

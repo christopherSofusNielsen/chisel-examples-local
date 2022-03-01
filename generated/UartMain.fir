@@ -123,19 +123,14 @@ circuit UartMain :
       node _T_5 = tail(_T_4, 1) @[Uart.scala 173:22]
       cntReg <= _T_5 @[Uart.scala 173:12]
       skip @[Uart.scala 172:47]
-    else : @[Uart.scala 174:29]
-      node _T_6 = eq(cntReg, UInt<4>("h0c")) @[Uart.scala 174:21]
-      when _T_6 : @[Uart.scala 174:29]
-        cntReg <= UInt<1>("h00") @[Uart.scala 175:12]
-        skip @[Uart.scala 174:29]
     
   module UartMain : 
     input clock : Clock
     input reset : UInt<1>
     output io : {flip rxd : UInt<1>, txd : UInt<1>}
     
-    inst Sender of Sender @[Uart.scala 201:19]
+    inst Sender of Sender @[Uart.scala 203:19]
     Sender.clock <= clock
     Sender.reset <= reset
-    io.txd <= Sender.io.txd @[Uart.scala 202:12]
+    io.txd <= Sender.io.txd @[Uart.scala 204:12]
     
